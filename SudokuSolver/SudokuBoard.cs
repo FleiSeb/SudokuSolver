@@ -9,15 +9,6 @@ namespace SudokuSolver {
     private int[,] board;
     private bool[,] fixedNumbers;
 
-    public override toString(){
-      for (int i = 0; i < 9; i++){
-        for (int j = 0; j < 9; j++){
-            Console.Write(board[i, j] + " ");
-        }
-        Console.WriteLine();
-      }
-    }
-
     public SudokuBoard() {
       board = new int[size, size];
       fixedNumbers = new bool[size, size];
@@ -41,6 +32,21 @@ namespace SudokuSolver {
     }
     public bool IsFixedNumber(int i, int j) {
       return fixedNumbers[i, j];
+    }
+
+    public override string ToString()
+    {
+      StringBuilder stringBuilder = new StringBuilder();
+      for (int i = 0; i < 9; i++)
+      {
+        for (int j = 0; j < 9; j++)
+        {
+            stringBuilder.Append(board[i, j] + " ");
+        }
+        stringBuilder.AppendLine();
+      }
+
+      return stringBuilder.ToString();
     }
 
     public BoardStatus Check() {

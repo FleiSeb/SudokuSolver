@@ -22,7 +22,7 @@ namespace SudokuSolver {
       bool solved = SudokuSolver.Solve(board);
 
       if(solved){
-        SudokuBoard.toString();
+        SudokuBoard.ToString();
       }
       Console.WriteLine($"{(solved ? "SOLVED YEAH!!!" : "UNSOLVABLE. HMPF!!")}");
     }
