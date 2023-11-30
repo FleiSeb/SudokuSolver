@@ -9,6 +9,15 @@ namespace SudokuSolver {
     private int[,] board;
     private bool[,] fixedNumbers;
 
+    public toString(){
+      for (int i = 0; i < 9; i++){
+        for (int j = 0; j < 9; j++){
+            Console.Write(board[i, j] + " ");
+        }
+        Console.WriteLine();
+      }
+    }
+
     public SudokuBoard() {
       board = new int[size, size];
       fixedNumbers = new bool[size, size];
